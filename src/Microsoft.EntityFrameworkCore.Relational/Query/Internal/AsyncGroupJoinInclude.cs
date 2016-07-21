@@ -24,6 +24,7 @@ namespace Microsoft.EntityFrameworkCore.Query.Internal
         private RelationalQueryContext _queryContext;
         private IAsyncRelatedEntitiesLoader[] _relatedEntitiesLoaders;
         private AsyncGroupJoinInclude _previous;
+        private Delegate _entityAccessor;
 
         /// <summary>
         ///     This API supports the Entity Framework Core infrastructure and is not intended to be used 
@@ -37,6 +38,23 @@ namespace Microsoft.EntityFrameworkCore.Query.Internal
             _navigationPath = navigationPath;
             _relatedEntitiesLoaderFactories = relatedEntitiesLoaderFactories;
             _querySourceRequiresTracking = querySourceRequiresTracking;
+        }
+
+        /// <summary>
+        ///     This API supports the Entity Framework Core infrastructure and is not intended to be used 
+        ///     directly from your code. This API may change or be removed in future releases.
+        /// </summary>
+        public virtual Delegate EntityAccessor => _entityAccessor;
+
+        /// <summary>
+        ///     This API supports the Entity Framework Core infrastructure and is not intended to be used 
+        ///     directly from your code. This API may change or be removed in future releases.
+        /// </summary>
+        public virtual AsyncGroupJoinInclude WithEntityAccessor([NotNull] Delegate entityAccessor)
+        {
+            _entityAccessor = entityAccessor;
+
+            return this;
         }
 
         /// <summary>

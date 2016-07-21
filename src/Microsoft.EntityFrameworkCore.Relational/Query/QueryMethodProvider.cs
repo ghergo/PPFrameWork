@@ -292,7 +292,15 @@ namespace Microsoft.EntityFrameworkCore.Query
 
                         nextOuter = default(TOuter);
 
-                        outerGroupJoinInclude?.Include(outer);
+                        var outerAccessor = outerGroupJoinInclude?.EntityAccessor as Func<TOuter, object>;
+                        if (outerAccessor != null)
+                        {
+                            outerGroupJoinInclude?.Include(outerAccessor(outer));
+                        }
+                        else
+                        {
+                            outerGroupJoinInclude?.Include(outer);
+                        }
 
                         var inner = innerShaper.Shape(queryContext, sourceEnumerator.Current);
                         var inners = new List<TInner>();
@@ -307,7 +315,15 @@ namespace Microsoft.EntityFrameworkCore.Query
                         {
                             var currentGroupKey = innerKeySelector(inner);
 
-                            innerGroupJoinInclude?.Include(inner);
+                            var innerAccessor = innerGroupJoinInclude?.EntityAccessor as Func<TInner, object>;
+                            if (innerAccessor != null)
+                            {
+                                innerGroupJoinInclude?.Include(innerAccessor(inner));
+                            }
+                            else
+                            {
+                                innerGroupJoinInclude?.Include(inner);
+                            }
 
                             inners.Add(inner);
 

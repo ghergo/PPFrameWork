@@ -418,7 +418,15 @@ namespace Microsoft.EntityFrameworkCore.Query
 
                         if (_groupJoinAsyncEnumerable._outerGroupJoinInclude != null)
                         {
-                            await _groupJoinAsyncEnumerable._outerGroupJoinInclude.IncludeAsync(outer, cancellationToken);
+                            var outerEntityAccessor = _groupJoinAsyncEnumerable._outerGroupJoinInclude.EntityAccessor as Func<TOuter, object>;
+                            if (outerEntityAccessor != null)
+                            {
+                                await _groupJoinAsyncEnumerable._outerGroupJoinInclude.IncludeAsync(outerEntityAccessor(outer), cancellationToken);
+                            }
+                            else
+                            {
+                                await _groupJoinAsyncEnumerable._outerGroupJoinInclude.IncludeAsync(outer, cancellationToken);
+                            }
                         }
 
                         var inner
@@ -442,7 +450,15 @@ namespace Microsoft.EntityFrameworkCore.Query
 
                         if (_groupJoinAsyncEnumerable._innerGroupJoinInclude != null)
                         {
-                            await _groupJoinAsyncEnumerable._innerGroupJoinInclude.IncludeAsync(inner, cancellationToken);
+                            var innerEntityAccessor = _groupJoinAsyncEnumerable._innerGroupJoinInclude.EntityAccessor as Func<TInner, object>;
+                            if (innerEntityAccessor != null)
+                            {
+                                await _groupJoinAsyncEnumerable._innerGroupJoinInclude.IncludeAsync(innerEntityAccessor(inner), cancellationToken);
+                            }
+                            else
+                            {
+                                await _groupJoinAsyncEnumerable._innerGroupJoinInclude.IncludeAsync(inner, cancellationToken);
+                            }
                         }
 
                         inners.Add(inner);
