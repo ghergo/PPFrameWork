@@ -5,7 +5,7 @@ Documentation on using PPF Core is available at <https://ppfRamework.com>.
   
 ## PPF here,  PPF  on CodePlex
 
-This project is for best project ORM.
+This project is created to be the BEST ORM in the galaxy.
 
 ## Says of Us 
 
