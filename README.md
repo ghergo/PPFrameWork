@@ -5,24 +5,24 @@ Documentation on using PPF Core is available at <https://ppfRamework.com>.
   
 ## PPF here,  PPF  on CodePlex
 
-This project is created to be the BEST ORM in the galaxy.
+'This project is created to be the BEST ORM in the galaxy.'
 
 ## Says of Us 
 
 ##HWUpgrade
- <<Da quando è uscito PPF , gli altri ORM sono scomparsi!>>
+ 'Da quando è uscito PPF , gli altri ORM sono scomparsi!'
  
 ##Repubblica
-  <<Il miglior frameowork al mondo>>
+  'Il miglior frameowork al mondo'
 
 ##MyMovies  
-  <<Le recensioni dei film sono senza paragoni grazie a PPF. E' come avere fosse possibilità di vedere i film in 3D>>.
+  'Le recensioni dei film sono senza paragoni grazie a PPF. E' come avere fosse possibilità di vedere i film in 3D'
   
 ##A. Banderas
-  <<Da quando abbiamo iniziato ad usare PPF , i cornetti della Mulino Bianco , sono ancora più buoni!>>
+  'Da quando abbiamo iniziato ad usare PPF , i cornetti della Mulino Bianco , sono ancora più buoni!'
   
 ##Photosi
-  <<Da quando lo usiamo, non c'è più bisogno di avere le chiavi combinate!!>>
+  'Da quando lo usiamo, non c'è più bisogno di avere le chiavi combinate!!'
   
  
 ## Database Providers
