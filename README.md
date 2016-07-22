@@ -1,21 +1,30 @@
-Entity Framework Core
+PerPicioFrameWork Core
 =====================
 
-Documentation on using EF Core is available at <https://docs.efproject.net>.
+Documentation on using PPF Core is available at <https://ppfRamework.com>.
+  
+## PPF here,  PPF  on CodePlex
 
-[![Travis build status](https://img.shields.io/travis/aspnet/EntityFramework.svg?label=travis-ci&branch=dev&style=flat-square)](https://travis-ci.org/aspnet/EntityFramework/branches)
-[![AppVeyor build status](https://img.shields.io/appveyor/ci/aspnetci/EntityFramework/dev.svg?label=appveyor&style=flat-square)](https://ci.appveyor.com/project/aspnetci/entityframework/branch/dev)
+This project is for best project ORM.
 
-## EF Core here, EF6 on CodePlex
+## Says of Us 
 
-This project is for Entity Framework Core. Entity Framework 6.x is still under active development on CodePlex at <http://entityframework.codeplex.com/>.
+##HWUpgrade
+ <<Da quando è uscito PPF , gli altri ORM sono scomparsi!>>
+ 
+##Repubblica
+  <<Il miglior frameowork al mondo>>
 
-## What is EF Core?
-
-Entity Framework (EF) Core is a lightweight and extensible version of the popular Entity Framework data access technology.
-
-EF Core is an object-relational mapper (O/RM) that enables .NET developers to work with a database using .NET objects. It eliminates the need for most of the data-access code that developers usually need to write. 
-
+##MyMovies  
+  <<Le recensioni dei film sono senza paragoni grazie a PPF. E' come avere fosse possibilità di vedere i film in 3D>>.
+  
+##A. Banderas
+  <<Da quando abbiamo iniziato ad usare PPF , i cornetti della Mulino Bianco , sono ancora più buoni!>>
+  
+##Photosi
+  <<Da quando lo usiamo, non c'è più bisogno di avere le chiavi combinate!!>>
+  
+ 
 ## Database Providers
 
 The source for SQL Server, SQLite, and InMemory providers are included in this project. Additional providers are available.
